@@ -1,0 +1,30 @@
+{
+    "name": "oh86/sm-cryptor-other",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Oh86\\OtherSmCryptor\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "chengj",
+            "email": "chen.gj@qq.com"
+        }
+    ],
+    "require": {
+        "oh86/sm_cryptor": "^1.5",
+        "guzzlehttp/guzzle": "*"
+    },
+    "require-dev": {
+        "laravel/framework": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Oh86\\OtherSmCryptor\\OtherSmCryptorServiceProvider"
+            ]
+        }
+    }
+}
