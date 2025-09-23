@@ -19,6 +19,10 @@ class OtherGMCryptor implements Cryptor
 
     public function sm3(string $text): string
     {
+        if (!$text) {
+            return '';
+        }
+
         try {
             return $this->api->sm3($text);
         } catch (ApiRequestException $e) {
@@ -29,6 +33,10 @@ class OtherGMCryptor implements Cryptor
 
     public function hmacSm3(string $text): string
     {
+        if (!$text) {
+            return '';
+        }
+
         try {
             return $this->api->hmacSm3($text);
         } catch (ApiRequestException $e) {
@@ -39,6 +47,10 @@ class OtherGMCryptor implements Cryptor
 
     public function sm4Encrypt(string $text): string
     {
+        if (!$text) {
+            return '';
+        }
+
         try {
             return $this->api->sm4Encrypt($text);
         } catch (ApiRequestException $e) {
@@ -49,6 +61,10 @@ class OtherGMCryptor implements Cryptor
 
     public function sm4Decrypt(string $cipherText): string
     {
+        if (!$cipherText) {
+            return '';
+        }
+
         try {
             return $this->api->sm4Decrypt($cipherText);
         } catch (ApiRequestException $e) {
@@ -59,6 +75,10 @@ class OtherGMCryptor implements Cryptor
 
     public function sm2GenSign(string $text): string
     {
+        if (!$text) {
+            return '';
+        }
+
         try {
             return $this->api->sm2GenSign($text);
         } catch (ApiRequestException $e) {
@@ -69,6 +89,10 @@ class OtherGMCryptor implements Cryptor
 
     public function sm2VerifySign(string $text, string $sign): bool
     {
+        if (!$text) {
+            return $sign == '';
+        }
+
         try {
             return $this->api->sm2VerifySign($text, $sign);
         } catch (ApiRequestException $e) {
