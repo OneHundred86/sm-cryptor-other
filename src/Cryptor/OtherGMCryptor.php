@@ -2,13 +2,14 @@
 
 namespace Oh86\OtherSmCryptor\Cryptor;
 
+use Oh86\SmCryptor\AbstractCryptor;
 use Oh86\SmCryptor\Cryptor;
 use Oh86\SmCryptor\Exceptions\SmCryptorException;
 use Oh86\OtherSmCryptor\Api\OtherGMApi;
 use Oh86\OtherSmCryptor\Exceptions\ApiRequestException;
 use Illuminate\Support\Facades\Log;
 
-class OtherGMCryptor implements Cryptor
+class OtherGMCryptor extends AbstractCryptor implements Cryptor
 {
     private OtherGMApi $api;
 

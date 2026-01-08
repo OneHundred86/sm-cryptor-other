@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "oh86/sm_cryptor": "^1.5",
+        "oh86/sm_cryptor": "^1.5 || ^2.0",
         "guzzlehttp/guzzle": "*"
     },
     "require-dev": {
